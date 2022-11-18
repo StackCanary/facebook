@@ -54,15 +54,40 @@ const defaultPosts = [
 function Feed() {
   const [posts, setPosts] = useState(defaultPosts)
 
-  function addPost(post) {
-    setPosts((prevPost) => [post, ...prevPost])
+  function createPost(post) {
+    setPosts((prevPosts) => [
+      {
+        name: "Bill Gates",
+        avatar: require("./assets/bill.jpg"),
+        post: post,
+        comments: [],
+      },
+      ...prevPosts,
+    ])
+  }
+
+  function addComment(index, comment) {
+    const comments = [
+      {
+        name: "Bill Gates",
+        avatar: require("./assets/bill.jpg"),
+        comment: comment,
+      },
+      ...posts[index].comments,
+    ]
+
+    setPosts((prevPosts) => {
+      const posts = [...prevPosts]
+      posts[index].comments = comments
+      return posts
+    })
   }
 
   return (
     <div className="flex-grow max-w-xl mx-auto">
-      <CreateAPost addPost={addPost} />
+      <CreateAPost onSubmit={createPost} />
       {posts.map((post, i) => (
-        <Post key={i} {...post} />
+        <Post key={i} index={i} {...post} onSubmit={addComment} />
       ))}
     </div>
   )

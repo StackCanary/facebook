@@ -9,11 +9,15 @@ import {
 } from "@heroicons/react/24/outline"
 import InputWithAvatar from "./InputWithAvatar"
 
-const Post = ({ name, avatar, post, comments }) => {
+const Post = ({ index, name, avatar, post, comments, onSubmit }) => {
   const [showComments, setComments] = useState(false)
 
   function toggleComments() {
     setComments((toggled) => !toggled)
+  }
+
+  function handleSubmit(comment) {
+    onSubmit(index, comment)
   }
 
   return (
@@ -22,23 +26,22 @@ const Post = ({ name, avatar, post, comments }) => {
       <p className="mt-2">{post}</p>
       <FbPostReactions reactions={24} comments={comments.length} />
       <FbPostFooter toggleComments={toggleComments} />
-      {showComments && <Comments comments={comments} />}
-    </div>
-  )
-}
-
-function Comments({ comments }) {
-  return (
-    <div className="mt-2 p-2">
-      <InputWithAvatar placeholder="Write a comment" />
-      {comments.map((comment, i) => (
-        <Comment
-          key={i}
-          name={comment.name}
-          avatar={comment.avatar}
-          comment={comment.comment}
-        ></Comment>
-      ))}
+      {showComments && (
+        <div className="mt-2 p-2">
+          <InputWithAvatar
+            placeholder="Write a comment"
+            onSubmit={handleSubmit}
+          />
+          {comments.map((comment, i) => (
+            <Comment
+              key={i}
+              name={comment.name}
+              avatar={comment.avatar}
+              comment={comment.comment}
+            ></Comment>
+          ))}
+        </div>
+      )}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Avatar from "./Avatar"
 
-const InputWithAvatar = ({ placeholder, addPost }) => {
+const InputWithAvatar = ({ placeholder, onSubmit }) => {
   const [value, setValue] = useState("")
 
   function handleChange(event) {
@@ -11,12 +11,7 @@ const InputWithAvatar = ({ placeholder, addPost }) => {
   function handleSubmit(event) {
     event.preventDefault()
 
-    addPost({
-      name: "Bill Gates",
-      avatar: require("./assets/bill.jpg"),
-      post: value,
-      comments: [],
-    })
+    onSubmit(value)
 
     setValue("")
   }

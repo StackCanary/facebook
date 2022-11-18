@@ -3,11 +3,11 @@ import Button from "./Button"
 import { VideoCameraIcon, CameraIcon } from "@heroicons/react/24/outline"
 import InputWithAvatar from "./InputWithAvatar"
 
-export function CreateAPost({ addPost }) {
+export function CreateAPost({ onSubmit }) {
   return (
     <div className="bg-gray-50 p-2 m-2 rounded-lg drop-shadow-md">
       <InputWithAvatar
-        addPost={addPost}
+        onSubmit={onSubmit}
         placeholder="What's on your mind Bill?"
       />
       <div className="flex justify-evenly mt-2 gap-2">
