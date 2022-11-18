@@ -6,7 +6,7 @@ import Widgets from "./Widgets"
 
 function App() {
   return (
-    <div className="bg-gray-200 h-screen">
+    <div className="bg-gray-200 h-screen overflow-hidden">
       <Header></Header>
 
       <div className="flex">

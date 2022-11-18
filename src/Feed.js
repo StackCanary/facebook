@@ -84,7 +84,7 @@ function Feed() {
   }
 
   return (
-    <div className="flex-grow max-w-xl mx-auto">
+    <div className="flex-grow max-w-xl mx-auto max-h-screen overflow-y-scroll no-scrollbar">
       <CreateAPost onSubmit={createPost} />
       {posts.map((post, i) => (
         <Post key={i} index={i} {...post} onSubmit={addComment} />
