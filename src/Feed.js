@@ -1,8 +1,8 @@
-import React from "react"
+import { React, useState } from "react"
 import Post from "./Post"
 import CreateAPost from "./CreateAPost"
 
-const posts = [
+const defaultPosts = [
   {
     name: "Bill Gates",
     avatar: require("./assets/bill.jpg"),
@@ -52,11 +52,17 @@ const posts = [
 ]
 
 function Feed() {
+  const [posts, setPosts] = useState(defaultPosts)
+
+  function addPost(post) {
+    setPosts((prevPost) => [post, ...prevPost])
+  }
+
   return (
     <div className="flex-grow max-w-xl mx-auto">
-      <CreateAPost />
+      <CreateAPost addPost={addPost} />
       {posts.map((post, i) => (
-        <Post {...post} />
+        <Post key={i} {...post} />
       ))}
     </div>
   )
