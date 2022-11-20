@@ -9,7 +9,7 @@ import {
 } from "@heroicons/react/24/outline"
 import InputWithAvatar from "./InputWithAvatar"
 
-const Post = ({ index, name, avatar, post, comments, onSubmit }) => {
+const Post = ({ index, name, avatar, post, image, comments, onSubmit }) => {
   const [showComments, setComments] = useState(false)
 
   function toggleComments() {
@@ -24,6 +24,7 @@ const Post = ({ index, name, avatar, post, comments, onSubmit }) => {
     <div className="bg-gray-50 p-3 m-2 rounded-lg drop-shadow-md">
       <FbPostHeader name={name} avatar={avatar} age="13h" />
       <p className="mt-2">{post}</p>
+      {image && <img className="p-2 rounded-sm" src={image} alt="" />}
       <FbPostReactions reactions={24} comments={comments.length} />
       <FbPostFooter toggleComments={toggleComments} />
       {showComments && (

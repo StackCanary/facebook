@@ -7,6 +7,7 @@ const defaultPosts = [
     name: "Bill Gates",
     avatar: require("./assets/bill.jpg"),
     post: "Hello World!",
+    image: null,
     comments: [
       {
         name: "Bill Gates",
@@ -24,6 +25,7 @@ const defaultPosts = [
     name: "Taylor Swift",
     avatar: require("./assets/taylor.jpg"),
     post: "Hello World!",
+    image: null,
     comments: [
       {
         name: "Bill Gates",
@@ -36,6 +38,7 @@ const defaultPosts = [
     name: "Robert Downey Jr",
     avatar: require("./assets/robert.jpg"),
     post: "Hello World!",
+    image: null,
     comments: [
       {
         name: "Taylor Swift",
@@ -54,12 +57,13 @@ const defaultPosts = [
 function Feed() {
   const [posts, setPosts] = useState(defaultPosts)
 
-  function createPost(post) {
+  function addPost(post, image) {
     setPosts((prevPosts) => [
       {
         name: "Bill Gates",
         avatar: require("./assets/bill.jpg"),
         post: post,
+        image: image,
         comments: [],
       },
       ...prevPosts,
@@ -85,7 +89,7 @@ function Feed() {
 
   return (
     <div className="flex-grow max-w-xl mx-auto max-h-screen overflow-y-scroll no-scrollbar">
-      <CreateAPost onSubmit={createPost} />
+      <CreateAPost addPost={addPost} />
       {posts.map((post, i) => (
         <Post key={i} index={i} {...post} onSubmit={addComment} />
       ))}
