@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.812d6ff1.css",
-    "main.js": "/static/js/main.5246fc89.js",
-    "static/js/787.a46efa3f.chunk.js": "/static/js/787.a46efa3f.chunk.js",
-    "static/media/arnold.jpg": "/static/media/arnold.6e55bbc9c08e2bd8a66b.jpg",
-    "static/media/sam.jpg": "/static/media/sam.f8a1a9e1cdce0c0c081f.jpg",
-    "static/media/dwayne.jpg": "/static/media/dwayne.cc4da32c16cc0600bb62.jpg",
-    "static/media/bill.jpg": "/static/media/bill.38f9513524ca59c509b5.jpg",
-    "static/media/taylor.jpg": "/static/media/taylor.c037c8adba6d29cd7b2c.jpg",
-    "static/media/robert.jpg": "/static/media/robert.96ae643ac9990a164272.jpg",
-    "index.html": "/index.html",
-    "main.812d6ff1.css.map": "/static/css/main.812d6ff1.css.map",
-    "main.5246fc89.js.map": "/static/js/main.5246fc89.js.map",
-    "787.a46efa3f.chunk.js.map": "/static/js/787.a46efa3f.chunk.js.map"
+    "main.css": "/facebook/static/css/main.812d6ff1.css",
+    "main.js": "/facebook/static/js/main.5f05b1e0.js",
+    "static/js/787.a46efa3f.chunk.js": "/facebook/static/js/787.a46efa3f.chunk.js",
+    "static/media/arnold.jpg": "/facebook/static/media/arnold.6e55bbc9c08e2bd8a66b.jpg",
+    "static/media/sam.jpg": "/facebook/static/media/sam.f8a1a9e1cdce0c0c081f.jpg",
+    "static/media/dwayne.jpg": "/facebook/static/media/dwayne.cc4da32c16cc0600bb62.jpg",
+    "static/media/bill.jpg": "/facebook/static/media/bill.38f9513524ca59c509b5.jpg",
+    "static/media/taylor.jpg": "/facebook/static/media/taylor.c037c8adba6d29cd7b2c.jpg",
+    "static/media/robert.jpg": "/facebook/static/media/robert.96ae643ac9990a164272.jpg",
+    "index.html": "/facebook/index.html",
+    "main.812d6ff1.css.map": "/facebook/static/css/main.812d6ff1.css.map",
+    "main.5f05b1e0.js.map": "/facebook/static/js/main.5f05b1e0.js.map",
+    "787.a46efa3f.chunk.js.map": "/facebook/static/js/787.a46efa3f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.812d6ff1.css",
-    "static/js/main.5246fc89.js"
+    "static/js/main.5f05b1e0.js"
   ]
 }
